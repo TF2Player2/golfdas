@@ -1,0 +1,112 @@
+body {
+    font-family: 'Playfair Display', serif; /* Changed to a prettier font */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #FFDB58; /* Changed background to mustard yellow */
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: #8b1ab8 #FFDB58; /* Thumb and track colors */
+}
+.container {
+    width: 90%; /* Increased width to expand horizontal borders */
+    margin: auto;
+    overflow: hidden;
+}
+header {
+    background: #fff; /* Changed top of the page to white */
+    color: #fff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #77aaff 3px solid;
+}
+header a {
+    font-family: 'Playfair Display', serif; /* Updated font-family */
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+header ul {
+    padding: 0;
+    list-style: none;
+}
+header li {
+    float: left;
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+header #branding {
+    float: left;
+}
+header #branding h1 {
+    margin: 0;
+    text-align: center; /* Center the title */
+    position: relative;
+    display: inline-block;
+    color: #000; /* Changed title text to black */
+    font-size: 72px; /* Doubled the font size for the title */
+}
+header nav {
+    float: right;
+    margin-top: 10px;
+}
+.bio {
+    padding: 20px;
+    background: #fff;
+    margin-top: 20px;
+    border-radius: 15px; /* Added border-radius */
+    transition: transform 0.3s ease-in-out;
+}
+.bio h2 {
+    font-family: 'Playfair Display', serif; /* Updated font-family */
+    color: #333;
+    position: relative;
+    display: inline-block;
+}
+.bio p {
+    font-family: 'Playfair Display', serif; /* Updated font-family */
+    font-size: 18px;
+    line-height: 1.8; /* Improved readability for multiple paragraphs */
+    text-align: justify; /* Align text for better presentation */
+    padding: 10px; /* Added padding for spacing */
+}
+
+.bio:hover {
+    transform: scale(1.05); /* Zoom effect on hover */
+}
+
+header #branding h1::after, .bio h2::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: #8b1ab8; /* Border color */
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+header #branding h1:hover::after, .bio h2:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+body::-webkit-scrollbar {
+    width: 10px; /* Scrollbar width */
+}
+
+body::-webkit-scrollbar-track {
+    background: #FFDB58; /* Track color */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #8b1ab8; /* Thumb color */
+    border-radius: 10px; /* Rounded corners */
+    transition: background-color 0.3s ease-in-out;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background-color: #5e0e8b; /* Darker thumb color on hover */
+}
